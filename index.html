@@ -2,6 +2,11 @@
 <html lang="en">
     <head>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <!-- disable browser auto zoom -->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <title>blockstack canvas2d rs wasm</title>
         <style>
             body {
@@ -47,6 +52,9 @@
                 width: 240px;
                 height: 500px;
             }
+            #canvas-block {
+                position: relative;
+            }
             #preview {
                 width: 80px;
                 height: 80px;
@@ -54,7 +62,7 @@
             #preview-block {
                 position: absolute;
                 top: 350px;
-                right: 35%;
+                right: -50%;
             }
             #next-label {
                 text-align: center;
@@ -140,13 +148,15 @@
             ><span id="score">0</span>, <span>Duration: </span
             ><span id="duration">0</span>
         </div>
-        <canvas id="canvas"></canvas>
+        <div id="canvas-block">
+            <canvas id="canvas"></canvas>
+            <div id="preview-block">
+                <canvas id="preview"></canvas>
+                <div id="next-label">next</div>
+            </div>
+        </div>
         <div id="controls-info">
             Use a,s,d to move block, q,e to rotate, space to pause
-        </div>
-        <div id="preview-block">
-            <canvas id="preview"></canvas>
-            <div id="next-label">next</div>
         </div>
         <div id="touch-controls">
             <div class="touch-control" id="touch-turn-left">↩️</div>
