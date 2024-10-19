@@ -2,11 +2,6 @@
 <html lang="en">
     <head>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-        <!-- disable browser auto zoom -->
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
         <title>blockstack canvas2d rs wasm</title>
         <style>
             body {
@@ -83,6 +78,8 @@
                 cursor: pointer;
                 border: 2px solid black;
                 background-color: white;
+                /* disable zoom on double tab */
+                touch-action: manipulation;
             }
             #touch-turn-right {
                 float: right;
